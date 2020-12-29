@@ -1,0 +1,7 @@
+{
+  "name": "cookProposer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
