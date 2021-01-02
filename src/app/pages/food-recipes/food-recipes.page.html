@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tarifler</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img [src]="loadedFood.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list [inset]="true">
+    <ion-item class="verticalLine" *ngFor="let recipe of recipes" [routerLink]="['./',recipe.id]" >
+      <ion-avatar slot="start">
+        <ion-img [src]="recipe.imageUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{ recipe.name }} {{recipe.owner }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
